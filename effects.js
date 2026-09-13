@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{const els=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){els.forEach(e=>e.style.opacity=1);return}const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.animationDelay=(Math.random()*.18)+'s';io.unobserve(e.target)}}),{threshold:.08});els.forEach(e=>io.observe(e));});
